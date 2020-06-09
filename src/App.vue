@@ -21,12 +21,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
-
-$rouge: #ff5e4c;
-$vert: #01ada9;
-
 html,
 body {
 	margin: 0;
@@ -37,13 +31,6 @@ body {
 *:before,
 *:after {
 	box-sizing: border-box;
-}
-
-.container {
-	max-width: 1640px;
-	width: 100%;
-	margin-right: auto;
-	margin-left: auto;
 }
 
 a {

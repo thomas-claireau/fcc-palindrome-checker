@@ -25,6 +25,11 @@ export default {
 	align-items: center;
 	padding: 20px 0;
 
+	@media screen and (max-width: $break-tablet) {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	> a {
 		font-family: 'Roboto';
 		text-transform: uppercase;
@@ -43,6 +48,12 @@ export default {
 
 		&.follow-me {
 			letter-spacing: 7px;
+
+			@media screen and (max-width: $break-tablet) {
+				width: 100%;
+				margin-top: 40px;
+				text-align: center;
+			}
 		}
 	}
 }

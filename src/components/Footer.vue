@@ -43,17 +43,26 @@ export default {
 #footer {
 	display: flex;
 	justify-content: space-between;
-	align-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+
+	@media screen and (max-width: $break-tablet) {
+		flex-direction: column;
+	}
 
 	> .logo {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
 		font-family: 'Roboto';
-		font-size: 22px;
+		font-size: 18px;
 		text-transform: uppercase;
 		color: #fff;
 
 		svg {
-			width: 120px;
-			height: 80px;
+			width: 50px;
+			height: auto;
+			margin-right: 20px;
 		}
 	}
 
@@ -62,13 +71,25 @@ export default {
 		justify-content: space-between;
 		align-items: center;
 
+		@media screen and (max-width: $break-tablet) {
+			margin-top: 20px;
+		}
+
 		> a {
-			width: 38px;
-			height: 38px;
+			&:not(:first-child) {
+				margin-left: 50px;
+			}
 
 			svg {
-				width: 100%;
-				height: 100%;
+				min-width: 28px;
+				width: 28px;
+				height: 28px;
+
+				@media screen and (max-width: $break-tablet) {
+					min-width: 24px;
+					width: 24px;
+					height: 24px;
+				}
 			}
 		}
 	}
