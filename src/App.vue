@@ -2,6 +2,10 @@
 	<div id="app" class="false">
 		<div class="container">
 			<Header></Header>
+			<div>
+				<input type="text" v-model="write" placeholder="Write some text..." />
+				<div class="inverse">{{ inverse }}</div>
+			</div>
 			<Footer></Footer>
 		</div>
 	</div>
@@ -16,6 +20,19 @@ export default {
 	components: {
 		Header,
 		Footer,
+	},
+	data() {
+		return {
+			write: '',
+		};
+	},
+	computed: {
+		inverse() {
+			return this.write
+				.split('')
+				.reverse('')
+				.join('');
+		},
 	},
 };
 </script>
@@ -50,6 +67,32 @@ a {
 
 	&.true {
 		background-color: $vert;
+	}
+
+	> .container > div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		input,
+		::placeholder {
+			font-family: 'Lilita One', Helvetica, Arial, sans-serif;
+			font-size: 140px;
+			color: #fff;
+			text-align: center;
+		}
+
+		input {
+			-webkit-appearance: none;
+			background-color: transparent;
+			border: none;
+
+			&:hover,
+			&:focus {
+				outline: none;
+			}
+		}
 	}
 }
 </style>

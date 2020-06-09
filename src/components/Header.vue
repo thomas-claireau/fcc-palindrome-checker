@@ -1,10 +1,10 @@
 <template>
-	<div id="header">
+	<header id="header">
 		<a href="#" class="works">
 			<angleSvg />Works
 		</a>
 		<a href="#" class="follow-me">@thomasclaireau</a>
-	</div>
+	</header>
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-	<div id="footer">
+	<footer id="footer">
 		<div class="logo">
 			<LogoSvg />Palindrome Checker
 		</div>
@@ -17,7 +17,7 @@
 				<YoutubeSvg />
 			</a>
 		</div>
-	</div>
+	</footer>
 </template>
 
 <script>
