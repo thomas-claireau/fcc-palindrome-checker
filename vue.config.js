@@ -16,4 +16,14 @@ module.exports = {
 			})
 			.loader('vue-svg-loader');
 	},
+	css: {
+		loaderOptions: {
+			sass: {
+				prependData: `
+					@import "@/styles/_vars.scss";
+					@import "@/styles/_container.scss";
+				`,
+			},
+		},
+	},
 };
