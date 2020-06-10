@@ -1,9 +1,15 @@
 <template>
-	<div id="app" class="false">
+	<div id="app" :class="isPalindrome() ? 'true' : 'false'">
 		<div class="container">
 			<Header></Header>
 			<div>
-				<input type="text" v-model="write" placeholder="Write some text..." />
+				<input
+					type="text"
+					v-model="write"
+					@input="validate()"
+					placeholder="Write some text..."
+					:class="{ empty: !this.write }"
+				/>
 				<div class="inverse">{{ inverse }}</div>
 			</div>
 			<Footer></Footer>
@@ -25,6 +31,18 @@ export default {
 		return {
 			write: '',
 		};
+	},
+	methods: {
+		validate() {
+			if (!/[a-zA-Z]/.test(this.write.charAt(this.write.length - 1))) {
+				this.write = this.write.slice(0, -1);
+			}
+		},
+		isPalindrome() {
+			if (this.write && this.inverse) return this.write == this.inverse;
+
+			return false;
+		},
 	},
 	computed: {
 		inverse() {
@@ -60,6 +78,7 @@ a {
 	height: 100vh;
 	font-family: 'Lilita One', Helvetica, Arial, sans-serif;
 	overflow: hidden;
+	transition: all 0.3s ease-in-out;
 
 	&.false {
 		background-color: $rouge;
@@ -76,7 +95,8 @@ a {
 		flex-direction: column;
 
 		input,
-		::placeholder {
+		::placeholder,
+		.inverse {
 			font-family: 'Lilita One', Helvetica, Arial, sans-serif;
 			font-size: 140px;
 			color: #fff;
@@ -87,6 +107,10 @@ a {
 			-webkit-appearance: none;
 			background-color: transparent;
 			border: none;
+
+			&.empty {
+				caret-color: transparent;
+			}
 
 			&:hover,
 			&:focus {
