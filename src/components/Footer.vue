@@ -80,6 +80,10 @@ export default {
 				margin-left: 50px;
 			}
 
+			&:first-child {
+				margin-top: -7px;
+			}
+
 			svg {
 				min-width: 28px;
 				width: 28px;
