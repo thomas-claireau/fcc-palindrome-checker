@@ -55,6 +55,7 @@ export default {
 		justify-content: flex-start;
 		align-items: center;
 		font-family: 'Roboto';
+		font-weight: 100;
 		font-size: 18px;
 		text-transform: uppercase;
 		color: #fff;
