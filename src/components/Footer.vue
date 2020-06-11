@@ -16,6 +16,7 @@
 			<a href="#">
 				<YoutubeSvg />
 			</a>
+			<a href="#" class="follow-me-desktop">@thomasclaireau</a>
 		</div>
 	</footer>
 </template>
@@ -71,6 +72,7 @@ export default {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		position: relative;
 
 		@media screen and (max-width: $break-tablet) {
 			margin-top: 20px;
@@ -95,6 +97,23 @@ export default {
 					width: 24px;
 					height: 24px;
 				}
+			}
+		}
+
+		.follow-me-desktop {
+			$break-custom: 1700px;
+			position: absolute;
+			top: -230px;
+			right: -120px;
+			font-family: 'Roboto';
+			font-weight: 100;
+			text-transform: uppercase;
+			color: #fff;
+			letter-spacing: 7px;
+			transform: rotate(90deg);
+
+			@media screen and (max-width: $break-custom) {
+				display: none;
 			}
 		}
 	}

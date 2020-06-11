@@ -79,7 +79,12 @@ export default {
 		}
 
 		&.follow-me {
+			$break-custom: 1700px;
 			letter-spacing: 7px;
+
+			@media screen and (min-width: $break-custom) {
+				display: none;
+			}
 
 			@media screen and (max-width: $break-tablet) {
 				width: 100%;
