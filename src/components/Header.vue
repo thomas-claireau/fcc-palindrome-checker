@@ -32,6 +32,7 @@ export default {
 
 	> a {
 		font-family: 'Roboto';
+		font-weight: 100;
 		text-transform: uppercase;
 		color: #fff;
 
@@ -43,7 +44,38 @@ export default {
 			align-items: center;
 			padding: 0 30px;
 			border: 2px solid #fff;
+			background-color: transparent;
 			border-radius: 50px;
+			transition: all 0.3s ease-in-out;
+
+			svg {
+				transform: translateX(0);
+				transition: all 0.3s ease-in-out;
+
+				g path {
+					fill: #fff;
+					stroke: #fff;
+					transition: all 0.3s ease-in-out;
+				}
+			}
+
+			&:hover {
+				color: $rouge;
+				font-weight: 500;
+				background-color: #fff;
+				transition: all 0.3s ease-in-out;
+
+				svg {
+					transform: translateX(-10px);
+					transition: all 0.3s ease-in-out;
+
+					g path {
+						fill: $rouge;
+						stroke: $rouge;
+						transition: all 0.3s ease-in-out;
+					}
+				}
+			}
 		}
 
 		&.follow-me {
