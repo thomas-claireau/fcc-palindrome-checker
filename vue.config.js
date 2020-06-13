@@ -1,5 +1,5 @@
 module.exports = {
-	publicPath: process.env.NODE_ENV === 'production' ? '/fcc/palindrome/' : '/',
+	publicPath: process.env.NODE_ENV === 'production' ? '/fcc/palindrome/dist/' : '/',
 	chainWebpack: (config) => {
 		const svgRule = config.module.rule('svg');
 
