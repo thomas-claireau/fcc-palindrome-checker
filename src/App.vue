@@ -5,10 +5,10 @@
 			<div>
 				<input
 					type="text"
-					v-model="write"
-					@input="validate()"
+					v-$model="write"
 					placeholder="Write..."
 					:class="{ empty: !this.write }"
+					v-focus
 				/>
 				<div class="inverse">{{ inverse }}</div>
 			</div>
@@ -51,6 +51,24 @@ export default {
 				.split('')
 				.reverse('')
 				.join('');
+		},
+	},
+	directives: {
+		focus: {
+			inserted: function(el) {
+				el.focus();
+			},
+		},
+		$model: {
+			bind: function(el, binding, vnode) {
+				el.oninput = () => {
+					if (!/[a-zA-Z\s]/.test(el.value.charAt(el.value.length - 1))) {
+						el.value = el.value.slice(0, -1);
+					}
+
+					return (vnode.context[binding.expression] = el.value);
+				};
+			},
 		},
 	},
 };
