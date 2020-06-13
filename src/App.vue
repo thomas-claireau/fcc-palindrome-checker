@@ -115,7 +115,6 @@ a {
 		overflow-x: hidden;
 
 		input,
-		::placeholder,
 		.inverse {
 			width: 100%;
 			font-family: 'Lilita One', Helvetica, Arial, sans-serif;
@@ -134,6 +133,15 @@ a {
 			@media screen and (max-width: $break-small) {
 				font-size: 60px;
 			}
+		}
+
+		input::placeholder,
+		input::-ms-input-placeholder {
+			color: #fff;
+		}
+
+		input::-ms-clear {
+			display: none;
 		}
 
 		input {
