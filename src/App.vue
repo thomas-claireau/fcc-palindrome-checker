@@ -133,15 +133,14 @@ a {
 			@media screen and (max-width: $break-small) {
 				font-size: 60px;
 			}
-		}
 
-		input::placeholder,
-		input::-ms-input-placeholder {
-			color: #fff;
-		}
+			&::placeholder {
+				color: #fff;
+			}
 
-		input::-ms-clear {
-			display: none;
+			&::-ms-clear {
+				display: none;
+			}
 		}
 
 		input {
