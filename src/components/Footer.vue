@@ -4,19 +4,19 @@
 			<LogoSvg />Palindrome Checker
 		</div>
 		<div class="social">
-			<a href="#">
+			<a href="https://www.linkedin.com/in/thomas-claireau/">
 				<LinkedinSvg />
 			</a>
-			<a href="#">
+			<a href="https://github.com/thomas-claireau">
 				<GithubSvg />
 			</a>
-			<a href="#">
+			<a href="https://twitter.com/thomas_claireau">
 				<TwitterSvg />
 			</a>
-			<a href="#">
+			<a href="https://www.youtube.com/channel/UCN-laeYkKx-gNeyIHKHWF-g?view_as=subscriber">
 				<YoutubeSvg />
 			</a>
-			<a href="#" class="follow-me-desktop">@thomasclaireau</a>
+			<a href="https://www.linkedin.com/in/thomas-claireau/" class="follow-me-desktop">@thomasclaireau</a>
 		</div>
 	</footer>
 </template>
