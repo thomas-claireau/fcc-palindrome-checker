@@ -1,7 +1,7 @@
 <template>
 	<header id="header">
 		<a href="#" class="works">
-			<angleSvg />Works
+			<angleSvg />Works Test
 		</a>
 		<a href="#" class="follow-me">@thomasclaireau</a>
 	</header>
