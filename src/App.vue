@@ -34,7 +34,7 @@ export default {
 	},
 	methods: {
 		validate() {
-			if (!/[a-zA-Z]/.test(this.write.charAt(this.write.length - 1))) {
+			if (!/[a-zA-Z\s]/.test(this.write.charAt(this.write.length - 1))) {
 				this.write = this.write.slice(0, -1);
 			}
 		},
@@ -93,10 +93,12 @@ a {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		overflow-x: hidden;
 
 		input,
 		::placeholder,
 		.inverse {
+			width: 100%;
 			font-family: 'Lilita One', Helvetica, Arial, sans-serif;
 			font-size: 140px;
 			color: #fff;
