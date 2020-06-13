@@ -7,7 +7,7 @@
 					type="text"
 					v-model="write"
 					@input="validate()"
-					placeholder="Write some text..."
+					placeholder="Write..."
 					:class="{ empty: !this.write }"
 				/>
 				<div class="inverse">{{ inverse }}</div>
@@ -39,7 +39,8 @@ export default {
 			}
 		},
 		isPalindrome() {
-			if (this.write && this.inverse) return this.write == this.inverse;
+			if (this.write && this.inverse)
+				return this.write.toLowerCase() == this.inverse.toLowerCase();
 
 			return false;
 		},
@@ -103,6 +104,18 @@ a {
 			font-size: 140px;
 			color: #fff;
 			text-align: center;
+
+			@media screen and (max-width: $break-medium) {
+				font-size: 100px;
+			}
+
+			@media screen and (max-width: $break-tablet) {
+				font-size: 80px;
+			}
+
+			@media screen and (max-width: $break-small) {
+				font-size: 60px;
+			}
 		}
 
 		input {
