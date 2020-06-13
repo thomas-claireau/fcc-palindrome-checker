@@ -19,6 +19,28 @@ export default {
 </script>
 
 <style lang="scss">
+#app.false {
+	#header > a.works:hover {
+		color: $rouge;
+
+		g path {
+			fill: $rouge;
+			stroke: $rouge;
+		}
+	}
+}
+
+#app.true {
+	#header > a.works:hover {
+		color: $vert;
+
+		g path {
+			fill: $vert;
+			stroke: $vert;
+		}
+	}
+}
+
 #header {
 	display: flex;
 	justify-content: space-between;
@@ -60,7 +82,6 @@ export default {
 			}
 
 			&:hover {
-				color: $rouge;
 				font-weight: 500;
 				background-color: #fff;
 				transition: all 0.3s ease-in-out;
@@ -70,8 +91,6 @@ export default {
 					transition: all 0.3s ease-in-out;
 
 					g path {
-						fill: $rouge;
-						stroke: $rouge;
 						transition: all 0.3s ease-in-out;
 					}
 				}
