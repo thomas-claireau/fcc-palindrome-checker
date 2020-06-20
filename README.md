@@ -1,4 +1,4 @@
-# fcc-palindrome-checker
+# fcc-palindrome-checker test
 
 ## Project setup
 
