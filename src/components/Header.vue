@@ -1,9 +1,15 @@
 <template>
 	<header id="header">
-		<a href="https://thomas-claireau.fr" class="works">
+		<a href="https://thomas-claireau.com" class="works" target="_blank" rel="noopenner">
 			<angleSvg />Works
 		</a>
-		<a href="https://www.linkedin.com/in/thomas-claireau/" class="follow-me">@thomasclaireau</a>
+		<a
+			href="https://www.linkedin.com/in/thomas-claireau/"
+			class="follow-me"
+			target="_blank"
+			rel="noopenner"
+			>@thomasclaireau</a
+		>
 	</header>
 </template>
 

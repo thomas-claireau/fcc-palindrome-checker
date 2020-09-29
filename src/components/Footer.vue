@@ -1,22 +1,23 @@
 <template>
 	<footer id="footer">
-		<div class="logo">
-			<LogoSvg />Palindrome Checker
-		</div>
+		<div class="logo"><LogoSvg />Palindrome Checker</div>
 		<div class="social">
-			<a href="https://www.linkedin.com/in/thomas-claireau/">
+			<a href="https://www.linkedin.com/in/thomas-claireau/" target="_blank" rel="noopenner">
 				<LinkedinSvg />
 			</a>
-			<a href="https://github.com/thomas-claireau">
+			<a href="https://github.com/thomas-claireau" target="_blank" rel="noopenner">
 				<GithubSvg />
 			</a>
-			<a href="https://twitter.com/thomas_claireau">
+			<a href="https://twitter.com/thomas_claireau" target="_blank" rel="noopenner">
 				<TwitterSvg />
 			</a>
-			<a href="https://www.youtube.com/channel/UCN-laeYkKx-gNeyIHKHWF-g?view_as=subscriber">
-				<YoutubeSvg />
-			</a>
-			<a href="https://www.linkedin.com/in/thomas-claireau/" class="follow-me-desktop">@thomasclaireau</a>
+			<a
+				href="https://thomas-claireau.com"
+				target="_blank"
+				rel="noopenner"
+				class="follow-me-desktop"
+				>@thomasclaireau</a
+			>
 		</div>
 	</footer>
 </template>
